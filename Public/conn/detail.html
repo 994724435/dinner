@@ -1,0 +1,87 @@
+﻿<div id="dish_class">
+			<div id="dish_top">
+				<ul>
+				<li class="dish_num" style="background: none;"></li>
+					<li>
+					<?php 
+					if($is_login){
+						echo "<a href='__ROOT__/index.php/Index/log'>
+							<img src='__ROOT__/Public/index/images/call2.gif' />
+						</a>";
+					}
+					?>
+						
+					</li>
+
+				<!-- 	<li>
+						<a href='#'>
+							登 录
+						</a>
+					</li> -->
+
+				</ul>
+			</div>
+
+			<div id="dish_2">
+				<ul>
+					
+						<li>
+							<a href="__ROOT__/index.php/Index/detail/name/粤菜">粤菜</a>
+						</li>
+					
+						<li>
+							<a href="__ROOT__/index.php/Index/detail/name/川菜">川菜</a>
+						</li>
+					
+						<li>
+							<a href="__ROOT__/index.php/Index/detail/name/湘菜">湘菜</a>
+						</li>
+					
+						<li>
+							<a href="__ROOT__/index.php/Index/detail/name/东北菜">东北菜</a>
+						</li>
+					
+				</ul>
+			</div>
+			<div id="dish_3">
+				<!-- 搜索菜品表单 $name  -->
+				<form action="#" method="post">
+					<table width="166px">
+					<?php 
+						if($is_login==0){
+						echo "<tr>
+							<td>
+								<a href='__ROOT__/index.php/User/login'>
+									<img src='__ROOT__/Public/index/images/look.gif' />
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href='__ROOT__/index.php/User/register'>
+									<img src='__ROOT__/Public/index/images/look2.gif' />
+								</a>
+							</td>
+						</tr>";
+					}
+					?>
+					<?php 
+						if($is_login){
+						echo "
+				        <tr>
+						<td style='color: red;text-align: center;'><a href='__ROOT__/index.php/Index/user' style='text-decoration: none;'><h3>我的下单</h3></a></td>
+						</tr>
+						<tr>
+							
+							<td>
+								<a href='__ROOT__/index.php/User/login'>
+									<img src='__ROOT__/Public/index/images/out.gif' />
+								</a>
+							</td>
+						</tr>";
+					}
+					?>						
+					</table>
+				</form>
+			</div>
+		</div>

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="__ROOT__/Public/admin/js/echarts.min.js"></script>	
+<title>Validation</title>
+<include file="./Public/conn/header.html" />
+        <div id="page-wrapper">
+        <div class="col-md-12 graphs">
+	   <div class="xs">
+  	   
+  	    <div class="well1 white">
+     	    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '关注数量城市比例'
+            },
+            tooltip: {},
+            legend: {
+                data:['数量']
+            },
+            xAxis: {
+                data: ["重庆","四川","加利福利亚","山西"]
+            },
+            yAxis: {},
+            series: [{
+                name: '数量',
+                type: 'bar',
+                data: [{$cq}, {$sc}, 1, 1]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+       myChart.setOption(option);
+    </script>
+     	
+      </div>
+    </div>
+    <div class="copy_layout">
+      <p>Copyright &copy; 2016  All rights reserved</p>
+   </div>
+   </div>
+      </div>
+      <!-- /#page-wrapper -->
+   </div>
+    <!-- /#wrapper -->
+<!-- Nav CSS -->
+<link href="__ROOT__/Public/admin/css/custom.css" rel="stylesheet">
+<!-- Metis Menu Plugin JavaScript -->
+<script src="__ROOT__/Public/admin/js/metisMenu.min.js"></script>
+<script src="__ROOT__/Public/admin/js/custom.js"></script>
+</body>
+</html>

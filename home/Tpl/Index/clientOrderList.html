@@ -1,0 +1,63 @@
+﻿
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="__ROOT__/Public/index/css/index.css" />
+	<script type="text/javascript">
+		// 通知服务员结账
+		function callPay(node) {
+			var orderId = node.lang;
+			window.location.href = "jiezhang.html";
+		}
+	</script>
+</head>
+
+<body style="text-align: center">
+	<div id="all">
+		<div id="menu">
+			<!-- 餐车div -->
+			<div id="count">
+				<table align="center" width="100%">
+					<tr height="40">
+				 		<td align="center" width="20%">菜名</td>
+				 		<td align="center" width="20%">单价</td>
+				 		<td align="center" width="20%">数量</td>
+				 		<td align="center" width="20%">小计</td>
+				 	</tr>
+					
+					<tr height="60">
+					 		<td align="center" width="20%">{$res.Lname}</td>
+					 		<td align="center" width="20%">￥{$res.Lnum}</td>
+					 		<td align="center" width="20%">1</td>
+					 		<td align="center" width="20%">{$res.Lnum}</td>
+				 		</tr>
+				 	
+
+					<tr>
+						<td colspan="6" align="right">总计:
+							<span style="font-size:36px;">&yen;</span>
+							<label
+								id="counter" style="font-size:36px">{$res.Lnum}</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6" style="margin-left: 100px; text-align: center;"align="right">
+						<form action="" method="post">
+							<input type="hidden" name="name" value="{$res.Lname}">
+							<input type="submit" value="结账" class="btn_next"  />
+						</form>	
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<!-- 右边菜系列表，菜品搜索框  -->
+		
+			<include file="./Public/conn/detail.html" />
+		
+	</div>
+</body>
+</html>

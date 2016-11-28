@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="__ROOT__/Public/admin/js/echarts.min.js"></script>	
+<title>Validation</title>
+<include file="./Public/conn/header.html" />
+        <div id="page-wrapper">
+        <div class="col-md-12 graphs">
+	   <div class="xs">
+  	    <div class="well1 white">
+     	    <div id="main" style="width: 600px;height:400px;"></div>
+       <script type="text/javascript">
+var dom = document.getElementById("main");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+    title: {
+        text: '一周关注变化'
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    xAxis : [
+        {
+            type : 'category',
+            boundaryGap : false,
+            data : ["{$date[0]['time']}","{$date[1]['time']}","{$date[2]['time']}","{$date[3]['time']}","{$date[4]['time']}","{$date[5]['time']}","{$date[6]['time']}"]
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'关注量',
+            type:'line',
+            stack: '总量',
+            areaStyle: {normal: {}},
+            data:[{$num}]
+        }
+    ] 
+};
+;
+if (option && typeof option === "object") {
+    var startTime = +new Date();
+    myChart.setOption(option, true);
+    var endTime = +new Date();
+    var updateTime = endTime - startTime;
+    console.log("Time used:", updateTime);
+}
+       </script>
+     	
+      </div>
+    </div>
+    <div class="copy_layout">
+      <p>Copyright &copy; 2016  All rights reserved</p>
+   </div>
+   </div>
+      </div>
+      <!-- /#page-wrapper -->
+   </div>
+    <!-- /#wrapper -->
+<!-- Nav CSS -->
+<link href="__ROOT__/Public/admin/css/custom.css" rel="stylesheet">
+<!-- Metis Menu Plugin JavaScript -->
+<script src="__ROOT__/Public/admin/js/metisMenu.min.js"></script>
+<script src="__ROOT__/Public/admin/js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+
+
+
+<include file="./Public/conn/header.html" />
+           
+        
+        <div id="page-wrapper">
+        <div class="graphs">	  
+    <div class="content_bottom">
+     <div class="col-md-12 span_3">
+		  <div class="bs-example1" data-example-id="contextual-table">
+		  	<h3 style="text-align: center;">信息处理列表</h3>
+		    <table class="table">
+		      <thead>
+		        <tr>
+		          <th>姓名</th>
+		          <th>时间</th>
+		          <th>名称</th>
+		          <th width="400px">问题</th>
+		          <th>操作</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		      <?php 
+		      		$i = 1;
+		      	?>
+		      <foreach name="result" item='v'>
+		      
+		      	<?php 
+		      		if(($i%2)==1){
+						echo "<tr class='active'>";
+					}else{
+						echo "<tr class='info'>";
+					}
+		      	?>
+		          <th scope="row">{$v.name}</th>
+		          <td>{$v.time}</td>
+		           <td>{$v.Lname}</td>
+		          <td width="400px">
+		          		{$v.comtent}
+		          </td>
+		          <td><a href='replyDo/id/{$v.id}'>前去处理</a></td>
+		        </tr>
+		      	<?php $i++ ;?>
+		       </foreach>		      
+		      </tbody>
+		    </table>
+		   </div>
+	   </div>
+		<div class="clearfix"> </div>
+	    </div>
+		<div class="copy">
+            <p>Copyright &copy; 2016  All rights reserved.</p>
+	    </div>
+		</div>
+       </div>
+      <!-- /#page-wrapper -->
+   </div>
+    <!-- /#wrapper -->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="__ROOT__/Public/admin/js/bootstrap.min.js"></script>
+</body>
+</html>

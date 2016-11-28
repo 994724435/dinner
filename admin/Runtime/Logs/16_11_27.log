@@ -1,0 +1,6 @@
+[ 2016-11-27T13:08:22+08:00 ] 127.0.0.1 /test/project/admin.php/Admin/today
+ERR: 表达式错误:“like”
+
+[ 2016-11-27T13:09:55+08:00 ] 127.0.0.1 /test/project/admin.php/Admin/today
+ERR: Model:findAll您所请求的方法不存在！
+

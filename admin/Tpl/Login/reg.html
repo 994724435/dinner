@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Register</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Modern Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!-- Bootstrap Core CSS -->
+<link href="__ROOT__/Public/admin/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<!-- Custom CSS -->
+<link href="__ROOT__/Public/admin/css/style.css" rel='stylesheet' type='text/css' />
+<link href="__ROOT__/Public/admin/css/font-awesome.css" rel="stylesheet"> 
+<!-- jQuery -->
+<script src="__ROOT__/Public/admin/js/jquery.min.js"></script>
+<!----webfonts--->
+<link href='http://fonts.useso.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+<!---//webfonts--->  
+<!-- Bootstrap Core JavaScript -->
+<script src="__ROOT__/Public/admin/js/bootstrap.min.js"></script>
+</head>
+<body id="login">
+  <div class="login-logo">
+  <!--   <a href="index.html"><img src="__ROOT__/Public/admin/images/logo.png" alt=""/></a>
+   -->
+   	<div style="font-size:20px;width:100px;height:40px;line-height:40px;margin:auto;text-align:center;color:black;font-weight:bold;">用户注册</div>
+  </div>
+  <h2 class="form-heading">Register</h2>
+  <form class="form-signin app-cam" action="__URL__/regDo" method='post'>
+      <p>Enter your personal details below</p>
+      <input type="text" class="form-control1" name='true_name' placeholder="Full Name" autofocus="">
+      <input type="text" class="form-control1" name="email"placeholder="Email" autofocus="">
+      <div class="radios">
+        <label for="radio-01" class="label_radio">
+            <input type="radio" name="sex" value="1" checked=""> Male
+        </label>
+        <label for="radio-02" class="label_radio">
+            <input type="radio" name="sex" value="2"> Female
+        </label>
+        <label for="radio-03" class="label_radio">
+            <input type="radio" name="sex" value="3"> sectrecy
+        </label>
+	  </div>
+	  <p> Enter your account details below</p>
+      <input type="text" class="form-control1"  name="name" placeholder="User Name" autofocus="">
+      <input type="password" class="form-control1" name="pwd" placeholder="Password">
+      <button class="btn btn-lg btn-success1 btn-block" type="submit">Submit</button>
+      <div class="registration">
+          Already Registered.
+          <a class="" href="__URL__/login">
+              Login
+          </a>
+      </div>
+  </form>
+   <div class="copy_layout login register">
+      <p>Copyright &copy; 2015.Company name All rights reserved.</p>
+   </div>
+</body>
+</html>

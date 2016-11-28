@@ -1,0 +1,67 @@
+
+
+
+<include file="./Public/conn/header.html" />
+           
+        
+        <div id="page-wrapper">
+        <div class="graphs">	  
+    <div class="content_bottom">
+     <div class="col-md-12 span_3">
+		  <div class="bs-example1" data-example-id="contextual-table">
+		  	<h3 style="text-align: center;">点餐总金额 <span style="color: red">{$sum} 元</span></h3>
+		    <table class="table">
+		      <thead>
+		        <tr>
+		          <th>菜名</th>
+		          <th>数量</th>
+		          <th>点餐人</th>
+		          <th>价格</th>
+		          <th>时间</th> 
+		     
+		        </tr>
+		      </thead>
+		      <tbody>
+		      <?php 
+		      		$i = 1;
+		      	?>
+		      <foreach name="re" item='v'>
+		      
+		      	<?php 
+		      		if(($i%2)==1){
+						echo "<tr class='active'>";
+					}else{
+						echo "<tr class='info'>";
+					}
+		      	?>
+		          <td>{$v.foodName}</td>
+		          <td>
+		              {$v.num}
+		          </td>
+		          <td>{$v.user_name}</td>
+		          <td>{$v.price}</td>
+		          <td>
+		          		{$v.addtime}
+		          </td>
+		          		
+		        </tr>
+		      	<?php $i++ ;?>
+		       </foreach>		      
+		      </tbody>
+		    </table>
+		   </div>
+	   </div>
+		<div class="clearfix"> </div>
+	    </div>
+		<div class="copy">
+            <p>Copyright &copy; 2016  All rights reserved.</p>
+	    </div>
+		</div>
+       </div>
+      <!-- /#page-wrapper -->
+   </div>
+    <!-- /#wrapper -->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="__ROOT__/Public/admin/js/bootstrap.min.js"></script>
+</body>
+</html>
